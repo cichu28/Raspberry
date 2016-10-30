@@ -4,7 +4,7 @@ import com.pi4j.io.gpio.GpioPinDigitalOutput;
 import com.pi4j.io.gpio.PinState;
 import com.pi4j.io.gpio.RaspiPin;
 
-public class ControlGpioExample {
+public class LedON {
 
     public static void main(String[] args) throws InterruptedException {
         // create gpio controller
