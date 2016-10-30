@@ -6,7 +6,8 @@ import com.pi4j.io.gpio.RaspiPin;
 
 public class LedON {
 
-    public static void main(String[] args) throws InterruptedException {
+    public static void main(String[] args) throws InterruptedException 
+    {
         // create gpio controller
         final GpioController gpio = GpioFactory.getInstance();
         // provision gpio pin #01 as an output pin and turn on
@@ -16,9 +17,10 @@ public class LedON {
         Thread.sleep(2000);
         // turn off gpio pin #01
         pin.low();
-/*
+        gpio.shutdown();
+        
+        /*
         Thread.sleep(5000);
-
         // toggle the current state of gpio pin #01 (should turn on)
         pin.toggle();
         System.out.println("--> GPIO state should be: ON");
@@ -35,6 +37,6 @@ public class LedON {
 */
         // stop all GPIO activity/threads by shutting down the GPIO controller
         // (this method will forcefully shutdown all GPIO monitoring threads and scheduled tasks)
-        gpio.shutdown();
+
     }
 }
